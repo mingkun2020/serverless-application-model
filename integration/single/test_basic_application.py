@@ -9,7 +9,7 @@ class TestBasicApplication(BaseTest):
     Basic AWS::Serverless::Application tests
     """
 
-    @skipIf(should_exclude_test_in_region('ServerlessRepo'), 'ServerlessRepo is not supported in this testing region')
+    @skipIf(should_exclude_test_in_region("ServerlessRepo"), "ServerlessRepo is not supported in this testing region")
     def test_basic_application_s3_location(self):
         """
         Creates an application with its properties defined as a template
@@ -23,7 +23,7 @@ class TestBasicApplication(BaseTest):
         self.assertEqual(len(tables), 1)
         self.assertEqual(tables[0]["LogicalResourceId"], "MyTable")
 
-    @skipIf(should_exclude_test_in_region('ServerlessRepo'), 'ServerlessRepo is not supported in this testing region')
+    @skipIf(should_exclude_test_in_region("ServerlessRepo"), "ServerlessRepo is not supported in this testing region")
     def test_basic_application_sar_location(self):
         """
         Creates an application with a lamda function
@@ -36,7 +36,7 @@ class TestBasicApplication(BaseTest):
         self.assertEqual(len(functions), 1)
         self.assertEqual(functions[0]["LogicalResourceId"], "helloworldpython")
 
-    @skipIf(should_exclude_test_in_region('ServerlessRepo'), 'ServerlessRepo is not supported in this testing region')
+    @skipIf(should_exclude_test_in_region("ServerlessRepo"), "ServerlessRepo is not supported in this testing region")
     def test_basic_application_sar_location_with_intrinsics(self):
         """
         Creates an application with a lambda function with intrinsics

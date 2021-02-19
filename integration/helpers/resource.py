@@ -158,6 +158,6 @@ def should_exclude_test_in_region(exclude_resource):
     region_exclude_resources_file = str(Path(config_dir, "region_exclude_resources.yml"))
     region_exclude_resources = load_yaml(region_exclude_resources_file)
 
-    if my_region not in region_exclude_resources['regions']:
+    if my_region not in region_exclude_resources["regions"]:
         return False
-    return exclude_resource in region_exclude_resources['regions'][my_region]['exclude_resources']
+    return exclude_resource in region_exclude_resources["regions"][my_region]["exclude_resources"]

@@ -15,7 +15,7 @@ class TestBasicLayerVersion(BaseTest):
         """
         self.create_and_verify_stack("basic_state_machine_inline_definition")
 
-    @skipIf(should_exclude_test_in_region('XRay'), 'XRay is not supported in this testing region')
+    @skipIf(should_exclude_test_in_region("XRay"), "XRay is not supported in this testing region")
     def test_basic_state_machine_with_tags(self):
         """
         Creates a State Machine with tags

@@ -9,7 +9,7 @@ class TestBasicHttpApi(BaseTest):
     Basic AWS::Serverless::HttpApi tests
     """
 
-    @skipIf(should_exclude_test_in_region('HttpApi'), 'HttpApi is not supported in this testing region')
+    @skipIf(should_exclude_test_in_region("HttpApi"), "HttpApi is not supported in this testing region")
     def test_basic_http_api(self):
         """
         Creates a HTTP API
